@@ -1,0 +1,104 @@
+
+    <div>
+      <div class="row">
+        <div class="col-md-2">
+          <ul style=" line-height: 2.3;">
+            <h5 style="margin-left: 2.5%; margin-top: 5px;">Menu</h5>
+            <li style="list-style-type: none;"><a  routerLink="/algo">Generic Operation</a></li>
+            <li style="list-style-type: none;"><a routerLink="/if">If Condition</a></li>
+            <li style="list-style-type: none;"><a routerLink="/ifelse">If-Else</a></li>
+            <li style="list-style-type: none;"><a routerLink="/switch">Switch-Case</a></li>
+            <li style="list-style-type: none;"><a routerLink="/for">For Loop</a></li>
+            <li style="list-style-type: none;"><a routerLink="/while">While Loop</a></li>
+            <li style="list-style-type: none;"><a routerLink="/dowhile">Do-While Loop</a></li>
+          </ul>
+        </div>
+
+
+
+         <div class="col-md-10" style="background-color: rgb(238, 234, 234);">
+          <h2 class="heading" >Generic Operation</h2>
+
+          <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button>
+
+
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element">
+                {{element.position}}
+                <!-- <mat-form-field>
+                  <mat-select>
+                    <mat-option *ngFor="let item of brands" [value]="item.value">
+                        {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>   -->
+              </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="variable">
+              <th mat-header-cell *matHeaderCellDef> Variable </th>
+              <td mat-cell *matCellDef="let element">
+                <mat-form-field appearance="fill">
+                  <mat-select>
+                    <mat-option *ngFor="let item of variable" [value]="item.value">
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+              </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="operator">
+              <th mat-header-cell *matHeaderCellDef> Operator </th>
+              <td mat-cell *matCellDef="let element">
+                <mat-form-field appearance="fill">
+                  <mat-select>
+                    <mat-option *ngFor="let item of operators" [value]="item.value">
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef> Action </th>
+              <td mat-cell *matCellDef="let element">
+                <mat-form-field appearance="fill">
+                  <mat-select>
+                    <mat-option *ngFor="let item of action" [value]="item.value">
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <br>
+          <section>
+
+            <div class="example-button-row">
+              <button mat-raised-button color="warn">Back</button>&nbsp;
+              <button mat-raised-button color="primary">Save Algorithm</button>
+
+            </div>
+          </section>
+
+    </div>
+    </div>
+    </div>
+

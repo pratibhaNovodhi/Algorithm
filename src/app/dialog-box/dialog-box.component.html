@@ -1,0 +1,32 @@
+<!-- dialog-box.component.html -->
+<h1 mat-dialog-title>Row Action :: <strong>{{action}}</strong></h1>
+<div mat-dialog-content>
+  <!-- <mat-form-field *ngIf="action == 'Add'; else elseTemplate">
+    <input placeholder="{{action}} Variable" matInput [(ngModel)]="local_data.variable">
+  </mat-form-field> -->
+
+  <h4>Basic native select</h4>
+<mat-form-field appearance="fill" *ngIf="action == 'Add'; else elseTemplate">
+  <mat-select>
+    <mat-option *ngFor="let item of variable" [value]="item.value">
+      {{item.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<mat-form-field appearance="fill" *ngIf="action == 'Add'; else elseTemplate">
+  <mat-select>
+    <mat-option *ngFor="let item of operators" [value]="item.value">
+      {{item.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+  <ng-template #elseTemplate>
+    Sure to Add <b>{{local_data.variable}}{{local_data.operator}}</b>?
+  </ng-template>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
