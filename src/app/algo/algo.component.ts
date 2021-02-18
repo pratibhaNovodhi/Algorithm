@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
-import { Todo } from "./todo";
+//import { Todo } from "./todo";
 
 
 export interface PeriodicElement {
@@ -71,9 +71,9 @@ export class AlgoComponent implements OnInit {
 
   ];
 
-  var: Todo[]=[
+  // var: Todo[]=[
 
-  ];
+  // ];
 
 
   operators: Food[] = [
@@ -137,7 +137,7 @@ export class AlgoComponent implements OnInit {
   }
 
   OnTaskAdd(){
-    this.var.push(new Todo(this.position, this.variable, this.operator, this.action))
+   // this.var.push(new Todo(this.position, this.variable, this.operators, this.action))
   }
-  
+
 }
