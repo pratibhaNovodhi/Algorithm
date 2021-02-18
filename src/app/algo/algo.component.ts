@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
+import { Todo } from "./todo";
 
 
 export interface PeriodicElement {
@@ -9,6 +10,11 @@ export interface PeriodicElement {
   position: number;
   operator: string;
   action: any;
+}
+
+export interface Food {
+  value: string;
+  viewValue: string;
 }
 
 export interface Brand{
@@ -31,6 +37,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./algo.component.css']
 })
 export class AlgoComponent implements OnInit {
+
+  flag: boolean=false;
 
   displayedColumns: string[] = ['position', 'variable', 'operator','action'];
   dataSource = ELEMENT_DATA;
@@ -60,7 +68,11 @@ export class AlgoComponent implements OnInit {
     {value: 'l', viewValue: 'l'},
     {value: 'k', viewValue: 'k'},
     {value: 'execute', viewValue: 'execute'},
-   
+
+  ];
+
+  var: Todo[]=[
+
   ];
 
 
@@ -124,4 +136,8 @@ export class AlgoComponent implements OnInit {
 
   }
 
+  OnTaskAdd(){
+    this.var.push(new Todo(this.position, this.variable, this.operator, this.action))
+  }
+  
 }
