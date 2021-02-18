@@ -9,7 +9,7 @@ export interface PeriodicElement {
   variable: string;
   position: number;
   operator: string;
-  action: any;
+  action: string;
 }
 
 export interface Food {
