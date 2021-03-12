@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
-//import { Todo } from "./todo";
+//import { Food } from "./home";
 
 
 export interface PeriodicElement {
@@ -22,10 +23,10 @@ export interface Brand{
   viewValue: string;
 }
 
-export interface Food {
-  value: string;
-  viewValue: string;
-}
+// export interface Food {
+//   value: string;
+//   viewValue: string;
+// }
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1,variable: 'a', operator:'+', action:'jsa'},
@@ -37,6 +38,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./algo.component.css']
 })
 export class AlgoComponent implements OnInit {
+
+
 
   flag: boolean=false;
 
