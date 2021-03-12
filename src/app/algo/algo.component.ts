@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
@@ -40,7 +39,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class AlgoComponent implements OnInit {
 
 
-  data: any;
+first:any;
+second:any;
 
   flag: boolean=false;
 
@@ -56,7 +56,7 @@ export class AlgoComponent implements OnInit {
 
   ngOnInit(): void {
 
-   
+
   }
 
 
@@ -120,6 +120,8 @@ export class AlgoComponent implements OnInit {
     {value: 'abc',viewValue:'abc'},
   ];
 
+  output:Food[]=[];
+
 
 
   openDialog(action: any,obj: any) {
@@ -148,9 +150,13 @@ export class AlgoComponent implements OnInit {
 
   }
 
-  OnTaskAdd(){
-   // this.var.push(new Todo(this.position, this.variable, this.operators, this.action))
 
+  // This method having problem.. Please look into that..
+  OnTaskAdd(){
+    this.first= this.variable.value;
+    this.second= this.variable.viewValue
+   // this.var.push(new Todo(this.position, this.variable, this.operators, this.action))
+    this.output.push(new Food(this.first, this.second));
 
   }
 
