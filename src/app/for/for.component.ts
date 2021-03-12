@@ -137,5 +137,7 @@ export class ForComponent implements OnInit {
 
   }
 
-
+  OnTaskAdd(){
+    
+  }
 }

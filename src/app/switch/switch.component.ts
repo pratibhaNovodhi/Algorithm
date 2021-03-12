@@ -140,5 +140,8 @@ export class SwitchComponent implements OnInit {
 
   }
 
+  OnTaskAdd(){
+
+  }
 
 }

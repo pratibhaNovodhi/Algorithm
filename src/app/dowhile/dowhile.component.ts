@@ -130,4 +130,8 @@ export class DowhileComponent implements OnInit {
 
   }
 
+  OnTaskAdd(){
+
+  }
+
 }

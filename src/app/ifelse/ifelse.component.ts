@@ -141,4 +141,8 @@ export class IfelseComponent implements OnInit {
     this.table.renderRows();
 
   }
+
+  OnTaskAdd(){
+    
+  }
 }

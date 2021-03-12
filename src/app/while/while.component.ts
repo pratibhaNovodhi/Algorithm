@@ -137,4 +137,8 @@ export class WhileComponent implements OnInit {
 
   }
 
+  OnTaskAdd(){
+    
+  }
+
 }
