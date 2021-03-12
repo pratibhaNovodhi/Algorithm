@@ -18,7 +18,7 @@
 
          <div class="col-md-10" style="background-color: rgb(238, 234, 234);">
           <h2 class="heading" >Generic Operation</h2>
-
+          <form  (ngSubmit)="OnTaskAdd()" >
           <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button>
 
 
@@ -93,11 +93,11 @@
 
             <div class="example-button-row">
               <button mat-raised-button color="warn">Back</button>&nbsp;
-              <button mat-raised-button color="primary"  (click)="OnTaskAdd()">Save Algorithm</button>
+              <button mat-raised-button color="primary">Save Algorithm</button>
 
             </div>
           </section>
-
+</form>
     </div>
     </div>
     </div>

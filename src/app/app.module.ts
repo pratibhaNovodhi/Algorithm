@@ -8,7 +8,6 @@ import { AlgoComponent } from './algo/algo.component';
 import { AlgohomeComponent } from './algohome/algohome.component';
 import { DowhileComponent } from './dowhile/dowhile.component';
 import { ForComponent } from './for/for.component';
-import { GenericComponent } from './generic/generic.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { IfComponent } from './if/if.component';
@@ -57,8 +56,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { FormsModule } from '@angular/forms';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +63,6 @@ import { FormsModule } from '@angular/forms';
     AlgohomeComponent,
     DowhileComponent,
     ForComponent,
-    GenericComponent,
     HeaderComponent,
     HomeComponent,
     IfComponent,

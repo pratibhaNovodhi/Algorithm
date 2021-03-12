@@ -2,7 +2,6 @@ import { AlgoComponent } from "./algo/algo.component";
 import { AlgohomeComponent } from "./algohome/algohome.component";
 import { DowhileComponent } from "./dowhile/dowhile.component";
 import { ForComponent } from "./for/for.component";
-import { GenericComponent } from "./generic/generic.component";
 import { HomeComponent } from "./home/home.component";
 import { IfComponent } from "./if/if.component";
 import { IfelseComponent } from "./ifelse/ifelse.component";
@@ -19,7 +18,6 @@ const arr: Routes=[
   {path: 'login', component: LoginComponent},
   {path: 'algohome', component: AlgohomeComponent},
   {path: 'algo', component: AlgoComponent},
-  {path: 'generic', component: GenericComponent},
   {path:'if', component: IfComponent},
   {path:'ifelse', component: IfelseComponent},
   {path: 'switch', component: SwitchComponent},

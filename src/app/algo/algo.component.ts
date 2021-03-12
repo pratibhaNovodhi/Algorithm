@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
@@ -40,6 +40,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class AlgoComponent implements OnInit {
 
 
+  data: any;
 
   flag: boolean=false;
 
@@ -50,11 +51,18 @@ export class AlgoComponent implements OnInit {
 
 
   constructor(public dialog: MatDialog) {
-
+    // this.ProductForm=[];
   }
 
   ngOnInit(): void {
+
+   
   }
+
+
+  // updateValue(){
+  //   console.log("abc");
+  // }
 
 
    variable: Food[] = [
@@ -71,6 +79,7 @@ export class AlgoComponent implements OnInit {
     {value: 'l', viewValue: 'l'},
     {value: 'k', viewValue: 'k'},
     {value: 'execute', viewValue: 'execute'},
+
 
   ];
 
@@ -141,6 +150,8 @@ export class AlgoComponent implements OnInit {
 
   OnTaskAdd(){
    // this.var.push(new Todo(this.position, this.variable, this.operators, this.action))
+
+
   }
 
 }
