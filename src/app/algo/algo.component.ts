@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
@@ -38,7 +39,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AlgoComponent implements OnInit {
 
-
+Generic!: FormGroup;
 first:any;
 second:any;
 
@@ -50,11 +51,18 @@ second:any;
   @ViewChild(MatTable,{static:true}) table!: MatTable<any>;
 
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private fb: FormBuilder) {
     // this.ProductForm=[];
   }
 
   ngOnInit(): void {
+
+    this.Generic= new FormGroup({
+      position: new FormControl(),
+      variable: new FormControl(),
+      operator: new FormControl(),
+      action: new FormControl(),
+    });
 
 
   }
@@ -80,6 +88,15 @@ second:any;
     {value: 'k', viewValue: 'k'},
     {value: 'execute', viewValue: 'execute'},
 
+
+  ];
+
+  position: Food[] = [
+    {value: '1', viewValue: '1'},
+    {value: '2', viewValue: '2'},
+    {value: '3', viewValue: '3'},
+    {value: '4', viewValue: '4'},
+    {value: '5', viewValue: '5'},
 
   ];
 
@@ -153,10 +170,10 @@ second:any;
 
   // This method having problem.. Please look into that..
   OnTaskAdd(){
-    this.first= this.variable.value;
-    this.second= this.variable.viewValue
-   // this.var.push(new Todo(this.position, this.variable, this.operators, this.action))
-    this.output.push(new Food(this.first, this.second));
+  //   this.first= this.variable.value;
+  //   this.second= this.variable.viewValue
+  //  // this.var.push(new Todo(this.position, this.variable, this.operators, this.action))
+  //   this.output.push(new Food(this.first, this.second));
 
   }
 

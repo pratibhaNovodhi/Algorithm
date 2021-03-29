@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
@@ -35,7 +36,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./switch.component.css']
 })
 export class SwitchComponent implements OnInit {
-
+Switch!: FormGroup;
   displayedColumns: string[] = ['position','condition', 'variable', 'operator','action'];
   dataSource = ELEMENT_DATA;
 
@@ -47,6 +48,13 @@ export class SwitchComponent implements OnInit {
   }
 
   ngOnInit(): void {
+     this.Switch= new FormGroup({
+      position: new FormControl(),
+      condition: new FormControl(),
+      variable: new FormControl(),
+      operator: new FormControl(),
+      action: new FormControl(),
+    });
   }
 
 
@@ -101,6 +109,16 @@ export class SwitchComponent implements OnInit {
 
   action: Food[] = [
     {value: 'done', viewValue: 'done'},
+  ];
+
+
+  position: Food[] = [
+    {value: '1', viewValue: '1'},
+    {value: '2', viewValue: '2'},
+    {value: '3', viewValue: '3'},
+    {value: '4', viewValue: '4'},
+    {value: '5', viewValue: '5'},
+
   ];
 
 
