@@ -154,5 +154,9 @@ export class ForComponent implements OnInit {
 
   }
 
-  OnTaskAdd(){}
+
+  OnTaskAdd(f){
+
+    console.log(f);
+  }
 }

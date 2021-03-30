@@ -18,7 +18,7 @@
 
          <div class="col-md-10" style="background-color: rgb(238, 234, 234);">
           <h2 class="heading" >Switch Case Operation</h2>
-          <form  (ngSubmit)="OnTaskAdd()"  [formGroup]="Switch">
+          <form  (ngSubmit)="OnTaskAdd(f)" #f="ngForm"  [formGroup]="Switch">
           <button mat-button (click)="openDialog('Add',{})" mat-flat-button color="primary">Add Row</button>
 <br><br>
           <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin-left: 5%;">
@@ -31,7 +31,7 @@
               <th mat-header-cell *matHeaderCellDef class="text-center"> No. </th>
               <td mat-cell *matCellDef="let element">
                 <mat-form-field appearance="fill">
-                  <mat-select formControlName="position">
+                  <mat-select formControlName="position" ngModel>
                     <mat-option *ngFor="let item of position" [value]="item.value">
                       {{item.viewValue}}
                     </mat-option>
@@ -45,7 +45,7 @@
               <th mat-header-cell *matHeaderCellDef class="text-center"> Condition </th>
               <td mat-cell *matCellDef="let element">
                 <mat-form-field appearance="fill">
-                  <mat-select  formControlName="condition">
+                  <mat-select  formControlName="condition" ngModel>
                     <mat-option *ngFor="let item of condition" [value]="item.value">
                       {{item.viewValue}}
                     </mat-option>
@@ -60,7 +60,7 @@
               <th mat-header-cell *matHeaderCellDef class="text-center"> Variable </th>
               <td mat-cell *matCellDef="let element">
                 <mat-form-field appearance="fill">
-                  <mat-select  formControlName="variable">
+                  <mat-select  formControlName="variable" ngModel>
                     <mat-option *ngFor="let item of variable" [value]="item.value">
                       {{item.viewValue}}
                     </mat-option>
@@ -75,7 +75,7 @@
               <th mat-header-cell *matHeaderCellDef class="text-center"> Operator </th>
               <td mat-cell *matCellDef="let element">
                 <mat-form-field appearance="fill">
-                  <mat-select  formControlName="operator">
+                  <mat-select  formControlName="operator" ngModel>
                     <mat-option *ngFor="let item of operators" [value]="item.value">
                       {{item.viewValue}}
                     </mat-option>
@@ -89,7 +89,7 @@
               <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
               <td mat-cell *matCellDef="let element">
                 <mat-form-field appearance="fill">
-                  <mat-select  formControlName="action">
+                  <mat-select  formControlName="action" ngModel>
                     <mat-option *ngFor="let item of action" [value]="item.value">
                       {{item.viewValue}}
                     </mat-option>
@@ -107,7 +107,7 @@
 
             <div class="example-button-row">
               <button mat-raised-button color="warn">Back</button>&nbsp;
-              <button mat-raised-button color="primary" (click)="OnTaskAdd()">Save Algorithm</button>
+              <button mat-raised-button color="primary" type="submit">Save Algorithm</button>
 
             </div>
           </section>

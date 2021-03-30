@@ -160,7 +160,9 @@ export class IfelseComponent implements OnInit {
 
   }
 
-  OnTaskAdd(){
 
+  OnTaskAdd(f){
+
+    console.log(f);
   }
 }

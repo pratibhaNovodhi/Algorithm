@@ -168,13 +168,9 @@ second:any;
   }
 
 
-  // This method having problem.. Please look into that..
-  OnTaskAdd(){
-  //   this.first= this.variable.value;
-  //   this.second= this.variable.viewValue
-  //  // this.var.push(new Todo(this.position, this.variable, this.operators, this.action))
-  //   this.output.push(new Food(this.first, this.second));
+  OnTaskAdd(f){
 
+    console.log(f);
   }
 
 }

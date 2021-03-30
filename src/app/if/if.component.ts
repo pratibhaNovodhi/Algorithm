@@ -154,7 +154,9 @@ export class IfComponent implements OnInit {
     this.table.renderRows();
 
   }
-OnTaskAdd(){
 
-}
+  OnTaskAdd(f){
+
+    console.log(f);
+  }
 }

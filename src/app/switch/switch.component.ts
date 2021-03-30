@@ -158,8 +158,9 @@ Switch!: FormGroup;
 
   }
 
-  OnTaskAdd(){
 
+  OnTaskAdd(f){
+
+    console.log(f);
   }
-
 }

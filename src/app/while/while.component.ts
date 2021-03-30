@@ -154,8 +154,10 @@ While!: FormGroup;
 
   }
 
-  OnTaskAdd(){
 
+  OnTaskAdd(f){
+
+    console.log(f);
   }
 
 }
